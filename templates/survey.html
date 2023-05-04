@@ -1,0 +1,27 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Survey{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form method="POST" onbeforeunload="leavePage()">
+                <h3>{{ question }}</h3>
+                <input type="text" name="{{ field_name }}" class="form-control" required>
+                <input type="hidden" name="question_index" value="{{ question_index }}">
+                <button type="submit" class="btn btn-primary">Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function leavePage() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '{{ url_for("leave") }}', true);
+        alert();
+        xhr.send();
+    }
+</script>
+{% endblock %}

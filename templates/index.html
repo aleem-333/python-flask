@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container my-5">
+    <h1 class="mb-3">{{ survey[index]['question'] }}</h1>
+    <form method="post" action="{{ url_for('survey', index=index) }}">
+      {% if survey[index]['type'] == 'text' %}
+        <div class="form-group">
+          <input type="text" class="form-control" id="{{ survey[index]['id'] }}" name="{{ survey[index]['id'] }}">
+        </div>
+      {% elif survey[index]['type'] == 'number' %}
+        <div class="form-group">
+          <input type="number" class="form-control" id="{{ survey[index]['id'] }}" name="{{ survey[index]['id'] }}">
+        </div>
+      {% endif %}
+      <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+  </div>
+{% endblock %}

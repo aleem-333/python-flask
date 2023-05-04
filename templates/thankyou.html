@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask Survey App{% endblock %}</title>
+    {% block styles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JRBdIFYKk0PbqTMFy0dQ5stw2M2jKf"
+        crossorigin="anonymous">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    {% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-0HlPdEdiGy7DrYkGe0twZC0eZGGqbPjszTb0sTtWnFHDd+LrqjJde+EuNEwHThQ2"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JRBdIFYKk0PbqTMFy0dQ5stw2M2jKf"
+        crossorigin="anonymous"></script>
+    {% endblock %}
+</body>
+</html>
